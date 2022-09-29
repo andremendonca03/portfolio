@@ -1,0 +1,128 @@
+@media only screen and (max-width: 800px) {
+  html {
+    font-size: 50%;
+  }
+
+  .intro {
+    margin: 120px auto;
+    h1:last-of-type {
+      margin-bottom: 30px;
+    }
+    .intro-btns a:not(:last-of-type) {
+      margin-right: 30px;
+    }
+  }
+
+  .about {
+    padding: 30px 0px;
+    h2 {
+      margin: 0px auto 30px auto;
+    }
+    .about-text {
+      p:first-of-type {
+        grid-column: 2 / span 10;
+        grid-row: 1;
+        margin-right: 0px;
+        margin-bottom: 30px;
+      }
+      p:last-of-type {
+        grid-column: 2 / span 10;
+        grid-row: 2;
+        margin-left: 0px;
+      }
+    }
+  }
+
+  .skills {
+    h1 {
+      margin: 0px auto 30px auto;
+    }
+    .skills-item {
+      grid-column: 2 / span 10 !important;
+      margin: 0px 0px 15px 0px !important;
+    }
+  }
+
+  .projects {
+    h1 {
+      margin: 0px auto 30px auto;
+    }
+    .projects-container {
+      &:nth-child(odd) {
+        padding: 30px 15px;
+      }
+      h3 {
+        grid-column: 1 / span 12;
+        grid-row: 1;
+      }
+      p {
+        grid-column: 1 / span 12;
+        grid-row: 2;
+      }
+      .project-img {
+        grid-column: 1 / span 12;
+        grid-row: 3;
+        max-width: 450px;
+        height: auto;
+        margin: 0px auto 15px auto;
+      }
+      .project-languages {
+        grid-column: 1 / span 12;
+        grid-row: 4;
+        margin: 0px 0px 15px 10px;
+      }
+      .project-btns {
+        grid-column: 1 / span 12;
+        grid-row: 5;
+        a:not(:last-of-type) {
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+
+  .side-projects {
+    .side-ui {
+      grid-column: 1 / span 12;
+      grid-row: 1;
+      margin: 0px auto 30px auto;
+    }
+    .side-code {
+      grid-column: 1 / span 12;
+      grid-row: 2;
+      margin: 0px auto;
+    }
+    .side-img {
+      max-width: 450px;
+      height: auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  html {
+    font-size: 45%;
+  }
+  .intro {
+    h1 {
+      font-size: 4.2rem;
+    }
+    .intro-btns {
+      a:not(:last-of-type) {
+        margin-right: 15px;
+      }
+    }
+  }
+  .about h2 {
+    font-size: 4.2rem;
+  }
+  .skills h1 {
+    font-size: 4.2rem;
+  }
+  .projects h1 {
+    font-size: 4.2rem;
+  }
+  .side-projects h2 {
+    font-size: 3.4rem;
+  }
+}
