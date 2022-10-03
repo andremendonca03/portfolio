@@ -83,118 +83,11 @@ img {
 /*==============
    TYPOGRAPHY
 ==============*/
-@media only screen and (max-width: 800px) {
-  html {
-    font-size: 50%;
-  }
-  .intro {
-    margin: 120px auto;
-  }
-  .intro h1:last-of-type {
-    margin-bottom: 30px;
-  }
-  .intro .intro-btns a:not(:last-of-type) {
-    margin-right: 30px;
-  }
-  .about {
-    padding: 30px 0px;
-  }
-  .about h2 {
-    margin: 0px auto 30px auto;
-  }
-  .about .about-text p:first-of-type {
-    grid-column: 2/span 10;
-    grid-row: 1;
-    margin-right: 0px;
-    margin-bottom: 30px;
-  }
-  .about .about-text p:last-of-type {
-    grid-column: 2/span 10;
-    grid-row: 2;
-    margin-left: 0px;
-  }
-  .skills h1 {
-    margin: 0px auto 30px auto;
-  }
-  .skills .skills-item {
-    grid-column: 2/span 10 !important;
-    margin: 0px 0px 15px 0px !important;
-  }
-  .projects h1 {
-    margin: 0px auto 30px auto;
-  }
-  .projects .projects-container:nth-child(odd) {
-    padding: 30px 15px;
-  }
-  .projects .projects-container h3 {
-    grid-column: 1/span 12;
-    grid-row: 1;
-  }
-  .projects .projects-container p {
-    grid-column: 1/span 12;
-    grid-row: 2;
-  }
-  .projects .projects-container .project-img {
-    grid-column: 1/span 12;
-    grid-row: 3;
-    max-width: 450px;
-    height: auto;
-    margin: 0px auto 15px auto;
-  }
-  .projects .projects-container .project-languages {
-    grid-column: 1/span 12;
-    grid-row: 4;
-    margin: 0px 0px 15px 10px;
-  }
-  .projects .projects-container .project-btns {
-    grid-column: 1/span 12;
-    grid-row: 5;
-  }
-  .projects .projects-container .project-btns a:not(:last-of-type) {
-    margin-right: 30px;
-  }
-  .side-projects .side-ui {
-    grid-column: 1/span 12;
-    grid-row: 1;
-    margin: 0px auto 30px auto;
-  }
-  .side-projects .side-code {
-    grid-column: 1/span 12;
-    grid-row: 2;
-    margin: 0px auto;
-  }
-  .side-projects .side-img {
-    max-width: 450px;
-    height: auto;
-  }
-}
-@media only screen and (max-width: 550px) {
-  html {
-    font-size: 45%;
-  }
-  .intro h1 {
-    font-size: 4.2rem;
-  }
-  .intro .intro-btns a:not(:last-of-type) {
-    margin-right: 15px;
-  }
-  .about h2 {
-    font-size: 4.2rem;
-  }
-  .skills h1 {
-    font-size: 4.2rem;
-  }
-  .projects h1 {
-    font-size: 4.2rem;
-  }
-  .side-projects h2 {
-    font-size: 3.4rem;
-  }
-}
 body {
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
   font-weight: 500;
   color: #021036;
+  overflow-x: hidden;
 }
 
 .page-grid {
@@ -558,5 +451,153 @@ body {
   }
   to {
     rotate: 360deg;
+  }
+}
+.js [data-scroll] {
+  opacity: 0;
+  transition: 0.9s;
+}
+.js [data-scroll].about, .js [data-scroll].side-ui, .js [data-scroll].side-code {
+  translate: 0px -40px;
+}
+.js [data-scroll].projects-container {
+  translate: -40px 0px;
+}
+.js [data-scroll] [data-delay] {
+  opacity: 0;
+  translate: -40px 0px;
+  transition-duration: 0.9s;
+}
+.js [data-scroll] [data-delay=".3s"] {
+  transition-delay: 0.3s;
+}
+.js [data-scroll] [data-delay=".6s"] {
+  transition-delay: 0.6s;
+}
+.js [data-scroll] [data-delay=".9s"] {
+  transition-delay: 0.9s;
+}
+.js [data-scroll] [data-delay="1.2s"] {
+  transition-delay: 1.2s;
+}
+.js [data-scroll] [data-delay="1.5s"] {
+  transition-delay: 1.5s;
+}
+
+.js [data-scroll].active {
+  opacity: 1;
+  translate: 0px 0px;
+}
+.js [data-scroll].active [data-delay] {
+  opacity: 1;
+  translate: 0px 0px;
+}
+
+@media only screen and (max-width: 800px) {
+  html {
+    font-size: 50%;
+  }
+  .intro {
+    margin: 120px auto;
+  }
+  .intro h1:last-of-type {
+    margin-bottom: 30px;
+  }
+  .intro .intro-btns a:not(:last-of-type) {
+    margin-right: 30px;
+  }
+  .about {
+    padding: 30px 0px;
+  }
+  .about h2 {
+    margin: 0px auto 30px auto;
+  }
+  .about .about-text p:first-of-type {
+    grid-column: 2/span 10;
+    grid-row: 1;
+    margin-right: 0px;
+    margin-bottom: 30px;
+  }
+  .about .about-text p:last-of-type {
+    grid-column: 2/span 10;
+    grid-row: 2;
+    margin-left: 0px;
+  }
+  .skills h1 {
+    margin: 0px auto 30px auto;
+  }
+  .skills .skills-item {
+    grid-column: 2/span 10 !important;
+    margin: 0px 0px 15px 0px !important;
+  }
+  .projects h1 {
+    margin: 0px auto 30px auto;
+  }
+  .projects .projects-container:nth-child(odd) {
+    padding: 30px 15px;
+  }
+  .projects .projects-container h3 {
+    grid-column: 1/span 12;
+    grid-row: 1;
+  }
+  .projects .projects-container p {
+    grid-column: 1/span 12;
+    grid-row: 2;
+  }
+  .projects .projects-container .project-img {
+    grid-column: 1/span 12;
+    grid-row: 3;
+    max-width: 450px;
+    height: auto;
+    margin: 0px auto 15px auto;
+  }
+  .projects .projects-container .project-languages {
+    grid-column: 1/span 12;
+    grid-row: 4;
+    margin: 0px 0px 15px 10px;
+  }
+  .projects .projects-container .project-btns {
+    grid-column: 1/span 12;
+    grid-row: 5;
+  }
+  .projects .projects-container .project-btns a:not(:last-of-type) {
+    margin-right: 30px;
+  }
+  .side-projects .side-ui {
+    grid-column: 1/span 12;
+    grid-row: 1;
+    margin: 0px auto 30px auto;
+  }
+  .side-projects .side-code {
+    grid-column: 1/span 12;
+    grid-row: 2;
+    margin: 0px auto;
+  }
+  .side-projects .side-img {
+    max-width: 450px;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 550px) {
+  html {
+    font-size: 45%;
+  }
+  .intro h1 {
+    font-size: 4.2rem;
+  }
+  .intro .intro-btns a:not(:last-of-type) {
+    margin-right: 15px;
+  }
+  .about h2 {
+    font-size: 4.2rem;
+  }
+  .skills h1 {
+    font-size: 4.2rem;
+  }
+  .projects h1 {
+    font-size: 4.2rem;
+  }
+  .side-projects h2 {
+    font-size: 3.4rem;
   }
 }

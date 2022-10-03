@@ -1,11 +1,11 @@
 @import "reset";
 @import "mixins";
-@import "responsive";
 
 body {
   font-family: $font-montserrat;
   font-weight: 500;
   color: $color-b0;
+  overflow-x: hidden;
 }
 
 .page-grid {
@@ -346,3 +346,44 @@ body {
     rotate: 360deg;
   }
 }
+
+.js [data-scroll] {
+  opacity: 0;
+  transition: .9s;
+  &.about, &.side-ui, &.side-code {
+    translate: 0px -40px;
+  }
+  &.projects-container {
+    translate: -40px 0px;
+  }
+  [data-delay] {
+    opacity: 0;
+    translate: -40px 0px;
+    transition-duration: .9s;
+  }
+  [data-delay=".3s"] {
+    transition-delay: .3s;
+  }
+  [data-delay=".6s"] {
+    transition-delay: .6s;
+  }
+  [data-delay=".9s"] {
+    transition-delay: .9s;
+  }
+  [data-delay="1.2s"] {
+    transition-delay: 1.2s;
+  }
+  [data-delay="1.5s"] {
+    transition-delay: 1.5s;
+  }
+}
+.js [data-scroll].active {
+  opacity: 1;
+  translate: 0px 0px;
+  [data-delay] {
+    opacity: 1;
+    translate: 0px 0px;
+  }
+}
+
+@import "responsive";
