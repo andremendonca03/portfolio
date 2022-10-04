@@ -1,0 +1,160 @@
+/*==============
+      CORES
+==============*/
+
+$color-p-2: #1A2638;
+$color-p-1: #28384D;
+$color-p0: #364959;
+$color-p1: #485F6B;
+$color-p2: #5E7780;
+
+$color-e0: #F27405;
+$color-e1: #FF9F21;
+
+$color-s0: #8C2703;
+
+$color-w-1: #E5DFDA;
+$color-w0: #FDFBF9;
+
+$color-b0: #03080F;
+$color-b1: #060F1A;
+$color-b2: #0A1724;
+
+/*==============
+   TIPOGRAFIA
+==============*/
+
+$font-normal: 'Fredoka', Arial, Helvetica, sans-serif;
+$font-condensed: 'Anton', Arial, Helvetica, sans-serif;
+
+@mixin font($type) {
+   @if $type == btn {
+      font-family: $font-normal;
+      font-size: 1.6rem;
+      font-weight: 600;
+      font-style: normal;
+      line-height: 1;
+      letter-spacing: 1.9px;
+      text-transform: uppercase;
+   }
+   @else if $type == menu {
+      font-family: $font-normal;
+      font-size: 1.6rem;
+      font-weight: 400;
+      font-style: normal;
+      line-height: 1;
+      letter-spacing: 1.3px;
+      text-transform: uppercase;
+   }
+   @else if $type == text {
+      font-family: $font-normal;
+      font-size: 1.8rem;
+      font-weight: 400;
+      font-style: normal;
+      line-height: 1.4;
+      letter-spacing: 1.25px;
+   }
+   @else if $type == section-title {
+      font-family: $font-condensed;
+      font-size: 2.8rem;
+      font-weight: 400;
+      font-style: normal;
+      line-height: 1.2;
+      letter-spacing: 0.7px;
+      text-transform: uppercase;
+   }
+   @else if $type == price {
+      font-family: $font-condensed;
+      font-size: 3.8rem;
+      font-weight: 400;
+      font-style: normal;
+      line-height: 1.2;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+   }
+   @else if $type == title {
+      font-family: $font-condensed;
+      font-size: 5.4rem;
+      font-weight: 400;
+      font-style: normal;
+      line-height: 1.2;
+      letter-spacing: 1.3px;
+      text-transform: uppercase;
+   }
+}
+
+/*==============
+      LAYOUT
+==============*/
+
+@mixin button() {
+   background-color: $color-e0;
+   transition: .2s;
+   @include font(btn);
+   &:hover {
+      background-color: $color-e1;
+   }
+}
+
+/*
+BASE CODE!!
+
+@mixin button($type, $bg) {
+   display: flex;
+   align-items: center;
+   max-width: fit-content;
+   max-height: fit-content;
+   background-color: transparent;
+   padding: 13px 15px;
+   transition: .3s;
+   @include font(button);
+   @include shadow(button);
+   &:hover {
+      transform: scale(1.01);
+   }
+   img {
+      max-width: 24px;
+      max-height: 24px;
+      margin-right: 5px;
+   }
+   @if $type == dark {
+      color: $cor-enfase;
+      border: 1px solid $cor-enfase;
+      img {
+         filter: $icon-cor-enfase;
+      }
+      @if $bg == brown {
+         &:hover {
+            box-shadow: 0px 0px 0px 2px $cor-contraste-escuro-lighter1,
+                        0px 0px 0px 3px $cor-enfase;
+         }
+      }
+      @else if $bg == black {
+         &:hover {
+            box-shadow: 0px 0px 0px 2px $cor-contraste-escuro,
+                        0px 0px 0px 3px $cor-enfase;
+         }
+      }
+   }
+   @else if $type == light {
+      color: $cor-contraste-claro;
+      border: 1px solid $cor-contraste-claro;
+      img {
+         filter: $icon-cor-constraste-claro;
+      }
+      @if $bg == brown {
+         text-shadow: none;
+         &:hover {
+            box-shadow: 0px 0px 0px 2px $cor-primaria,
+                        0px 0px 0px 3px $cor-contraste-claro;
+         }
+      }
+      @else if $bg == black {
+         &:hover {
+            box-shadow: 0px 0px 0px 2px $cor-contraste-escuro,
+                        0px 0px 0px 3px $cor-contraste-claro;
+         }
+      }
+   }
+}
+*/
