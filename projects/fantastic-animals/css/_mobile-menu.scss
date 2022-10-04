@@ -1,0 +1,49 @@
+[data-menu="button"] {
+   display: none;
+}
+
+@media only screen and (max-width: 700px) {
+   .js [data-menu="button"] {
+      display: flex;
+      align-items: center;
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #FFF;
+      background-color: #222;
+      padding: .5rem 1rem;
+      border: none;
+      border-radius: 4px;
+      margin: 10px;
+      position: relative;
+      cursor: pointer;
+      z-index: 300;
+      &::before {
+         content: '';
+         display: inline-block;
+         width: 12px;
+         height: 2px;
+         background-color: #FFF;
+         margin-right: 4px;
+         box-shadow: 0px 4px #FFF, 0 -4px #FFF;
+      }
+   }
+   .js [data-menu="list"] {
+      display: none;
+      &.ativo {
+         display: block;
+         max-width: 160px;
+         background-color: #FB5;
+         padding: 60px 0px 20px 0px;
+         box-shadow: 2px 2px 2px 0px rgba(0,0,0, .2);
+         position: absolute;
+         top: 0px;
+         z-index: 200;
+         animation: show-right .3s forwards;
+      }
+   }
+   .js .dropdown-menu {
+      position: static;
+      border: none;
+   }
+}
