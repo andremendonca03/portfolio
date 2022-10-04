@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Prime Number</title>
+
+   <script>document.documentElement.classList.add('js'); </script>
+
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap" rel="stylesheet" />
+
+   <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+   
+   <main class="card">
+      <div class="color_scheme_modes">
+         <div class="color_scheme_modes-dark">
+            <img src="icon/darkmode-icon.svg" alt="Dark Mode" />
+            <img src="icon/darkmode-w-icon.svg" alt="Dark Mode" />
+         </div>
+
+         <div class="color_scheme_modes-light">
+            <img src="icon/lightmode-icon.svg" alt="Light Mode" />
+            <img src="icon/lightmode-w-icon.svg" alt="Light Mode" />
+         </div>
+      </div>
+      <h1 class="card-title">Prime Number Validator</h1>
+
+      <p class="card-text">Type any number and see whether it's prime or not.</p>
+
+      <div class="input_field">
+         <div class="input_field-btns">
+            <div class="input_field-btns-plus">
+               <img src="icon/plus.svg" alt="Plus" />
+            </div>
+
+            <div class="input_field-btns-minus">
+               <img src="icon/minus.svg" alt="Minus" />
+            </div>
+         </div>
+         <input type="number" name="input_number" id="input_number" value="0" />
+      </div>
+
+      <button type="button">Check</button>
+
+      <div class="answer_field">
+         <p></p>
+      </div>
+
+      <div class="info">
+         <div class="info-icon">
+            <img src="icon/info-icon.svg" alt="Info" />
+            <img src="icon/info-w-icon.svg" alt="Info" />
+         </div>
+         <p class="info-text">
+            A prime number is a positive number that can just be divided by 1 or by itself, being the rest 0. For example: <br />
+            3/1 has rest 0; <br />
+            3/3 has rest 0; <br />
+            So ‘3’ is a prime number.
+         </p>
+      </div>
+   </main>
+
+   <script src="script.js"></script>
+</body>
+</html>
