@@ -376,6 +376,12 @@ body {
   [data-delay="1.5s"] {
     transition-delay: 1.5s;
   }
+  [data-delay="1.8s"] {
+    transition-delay: 1.8s;
+  }
+  [data-delay="2.1s"] {
+    transition-delay: 2.1s;
+  }
 }
 .js [data-scroll].active {
   opacity: 1;
